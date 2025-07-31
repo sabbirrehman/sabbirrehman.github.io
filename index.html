@@ -1,147 +1,95 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sabbir Rehman</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }body {
-  background: #0f172a;
-  color: #f1f5f9;
-  line-height: 1.6;
-}
-
-header {
-  background: #1e293b;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-header h1 {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #38bdf8;
-}
-
-nav {
-  margin-top: 0.5rem;
-}
-
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #cbd5e1;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #38bdf8;
-}
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 4rem 1.5rem;
-  text-align: center;
-}
-
-.hero h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  max-width: 600px;
-  color: #94a3b8;
-}
-
-.btn {
-  margin-top: 2rem;
-  padding: 0.75rem 1.5rem;
-  background: #38bdf8;
-  color: #0f172a;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #0ea5e9;
-}
-
-.section {
-  padding: 3rem 1.5rem;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.card {
-  background: #1e293b;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.card h3 {
-  font-size: 1.5rem;
-  color: #38bdf8;
-  margin-bottom: 1rem;
-}
-
-.card p {
-  color: #cbd5e1;
-}
-
-footer {
-  background: #1e293b;
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
-  color: #64748b;
-}
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabbir Rehman - Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Sabbir Rehman</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+
+    <header class="main-header">
+        <div class="logo">SABBIR REHMAN</div>
+        <button class="hamburger-menu" aria-label="Open menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <nav class="off-canvas-menu">
+        <button class="close-menu" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#service1">Muggle Memo</a></li>
+            <li><a href="#service2">TinyHuman</a></li>
+            <li><a href="#service3">SecondPassport</a></li>
+            <li><a href="#service4">Record Room</a></li>
+            <li><a href="#service5">Passive Journal</a></li>
+            <li><a href="#service6">Maklu Initiative</a></li>
+            <li><a href="#service7">Furryghor</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
-  </header>  <section class="hero">
-    <h2>Welcome to My Portfolio</h2>
-    <p>I’m a passionate learner, developer and problem-solver. Explore my projects, connect with me, and let’s build something impactful.</p>
-    <button class="btn" onclick="window.location.href='#projects'">View Projects</button>
-  </section>  <section class="section" id="about">
-    <div class="card">
-      <h3>About Me</h3>
-      <p>I'm Sabbir, an aspiring web developer and student. I love clean design, smart ideas, and building digital experiences that matter. This is my personal site built with HTML and GitHub Pages!</p>
-    </div>
-  </section>  <section class="section" id="projects">
-    <div class="card">
-      <h3>Projects</h3>
-      <p>Stay tuned! I'm currently working on several exciting projects in web development, UI/UX, and open source.</p>
-    </div>
-  </section>  <section class="section" id="contact">
-    <div class="card">
-      <h3>Contact</h3>
-      <p>Email me at: <strong>sabbir@example.com</strong><br>Connect on GitHub: <strong>github.com/sabbirrehman</strong></p>
-    </div>
-  </section>  <footer>
-    &copy; 2025 Sabbir Rehman. All rights reserved.
-  </footer>
+
+    <main>
+        <section class="hero-section">
+            <h1>JOIN MY BUSINESS SCHOOL</h1>
+            <p>Let's Start a Business, Together.</p>
+        </section>
+
+        <section class="video-section">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID?rel=0&amp;showinfo=0&amp;modestbranding=1"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <a href="https://forms.gle/YOUR_FORM_LINK" target="_blank" class="cta-button">Apply to Join Business School</a>
+        </section>
+
+        <section id="services" class="content-section">
+            <h2>My Services / Ventures</h2>
+            <div class="service-grid">
+                <div id="service1" class="service-item">
+                    <h3>Muggle Memo</h3>
+                    <p>Brief description of Muggle Memo.</p>
+                </div>
+                <div id="service2" class="service-item">
+                    <h3>TinyHuman</h3>
+                    <p>Brief description of TinyHuman.</p>
+                </div>
+                <div id="service3" class="service-item">
+                    <h3>SecondPassport</h3>
+                    <p>Brief description of SecondPassport.</p>
+                </div>
+                </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>Hello! I'm Sabbir Rehman, passionate about [Your Field/Interests]. I enjoy [mention a hobby or interest]. My journey involves [briefly mention career path/goals].</p>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out via email or connect with me on social media.</p>
+            <ul>
+                <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/sabbirrehman" target="_blank">sabbirrehman</a></li>
+                <li>GitHub: <a href="https://github.com/sabbirrehman" target="_blank">sabbirrehman</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sabbir Rehman. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-  </html>
+</html>
