@@ -1,0 +1,321 @@
+/* General Body and Font Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll due to off-canvas */
+}
+
+a {
+    color: #007bff; /* Blue for links, adjust as needed */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Header Styles */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure header stays on top */
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8em;
+    cursor: pointer;
+    display: block; /* Always show hamburger on mobile */
+}
+
+/* Off-Canvas Menu Styles */
+.off-canvas-menu {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Hidden by default */
+    width: 250px; /* Width of the menu */
+    height: 100%;
+    background-color: #1a1a1a; /* Slightly lighter dark background for menu */
+    color: #fff;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease-in-out;
+    z-index: 1001; /* Higher than header */
+    padding-top: 60px; /* Space for the close button */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+}
+
+.off-canvas-menu.open {
+    right: 0; /* Slide in */
+}
+
+.off-canvas-menu .close-menu {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+.off-canvas-menu ul {
+    list-style: none;
+    padding: 0;
+    width: 100%; /* Make ul take full width of menu */
+}
+
+.off-canvas-menu ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #333; /* Separator lines */
+}
+
+.off-canvas-menu ul li:last-child {
+    border-bottom: none;
+}
+
+.off-canvas-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block; /* Make link clickable over full list item */
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.off-canvas-menu ul li a:hover {
+    background-color: #333; /* Highlight on hover */
+    border-radius: 5px;
+    padding-left: 10px; /* Slight padding increase on hover */
+}
+
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    min-height: calc(100vh - 80px); /* Adjust based on header height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 3em; /* Larger on desktop */
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Video Section */
+.video-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1a1a1a; /* Slightly different dark shade */
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (height / width * 100) */
+    height: 0;
+    overflow: hidden;
+    max-width: 800px; /* Max width for the video */
+    margin: 0 auto 30px; /* Center the video and add space below */
+    background-color: #000; /* Fallback for video area */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Content Sections (About, Services, Contact) */
+.content-section {
+    padding: 60px 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    border-bottom: 1px solid #333; /* Separator for sections */
+}
+
+.content-section:last-of-type {
+    border-bottom: none;
+}
+
+.content-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #007bff; /* Highlight section titles */
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.content-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-item {
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.service-item h3 {
+    color: #fff;
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.content-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.content-section ul li {
+    margin-bottom: 10px;
+}
+
+.content-section ul li a {
+    font-size: 1.1em;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #000;
+    color: #777;
+    font-size: 0.9em;
+    border-top: 1px solid #1a1a1a;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 1.3em;
+    }
+
+    .hamburger-menu {
+        font-size: 1.5em;
+    }
+
+    .hero-section {
+        padding: 80px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .content-section {
+        padding: 40px 15px;
+    }
+
+    .content-section h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.1em;
+    }
+
+    .hamburger-menu {
+        font-size: 1.3em;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-section p {
+        font-size: 0.9em;
+    }
+
+    .off-canvas-menu {
+        width: 200px; /* Smaller menu for smaller screens */
+        right: -250px; /* Adjusted to hide properly */
+    }
+}
